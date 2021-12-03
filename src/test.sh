@@ -14,16 +14,22 @@ function do_test() {
 }
 
 # Day 01. Sonar Sweep.
-do_test 01 1 test.txt 7
-do_test 01 1 input.txt 1709
-do_test 01 3 test.txt 5
-do_test 01 3 input.txt 1761
+#do_test 01 1 test.txt 7
+#do_test 01 1 input.txt 1709
+#do_test 01 3 test.txt 5
+#do_test 01 3 input.txt 1761
+#
+## Day 02. Dive!
+#do_test 02 1 test.txt 150
+#do_test 02 1 input.txt 1936494
+#do_test 02 2 test.txt 900
+#do_test 02 2 input.txt 1997106066
 
-# Day 02. Dive!
-do_test 02 1 test.txt 150
-do_test 02 1 input.txt 1936494
-do_test 02 2 test.txt 900
-do_test 02 2 input.txt 1997106066
+# Day 03. Binary Diagnostic.
+do_test 03 1 test.txt 198
+do_test 03 1 input.txt 2743844
+do_test 03 2 test.txt 230
+do_test 03 2 input.txt 6677951
 
 if [ -n "$?" ] ; then
   exit

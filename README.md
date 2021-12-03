@@ -22,7 +22,7 @@ Tests just need bash!
 
 ## Par for the course
 
-| day | 01  | 02  |
-| :-: | :-: | :-: |
-| par | 155 | 337 |
+| day | 01  | 02  | 03  |
+| :-: | :-: | :-: | :-: |
+| par | 155 | 337 | 578 |
 
