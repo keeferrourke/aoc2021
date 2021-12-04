@@ -1,5 +1,6 @@
 import com.adventofcode.day01
 import com.adventofcode.day02
+import com.adventofcode.day03
 import java.lang.System.err
 import kotlin.system.exitProcess
 
@@ -16,6 +17,7 @@ fun main(args: Array<String>) {
   when (day.toIntOrNull()) {
     1 -> day01(input, dayArgs)
     2 -> day02(input, dayArgs)
+    3 -> day03(input, dayArgs)
     else -> exit(1, "Unknown Advent of Code day")
   }
 }

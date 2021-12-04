@@ -1,6 +1,7 @@
 package com.adventofcode
 
 import io.kotest.core.spec.style.FunSpec
+import io.kotest.matchers.ints.shouldBeGreaterThan
 import io.kotest.matchers.shouldBe
 
 class AdventOfCodeTest : FunSpec({
@@ -28,5 +29,20 @@ class AdventOfCodeTest : FunSpec({
   test ("day 2 part 2") {
     dive(day2TestInput, strategy = Strategy.CORRECTLY) shouldBe 900
     dive(day2RealInput, strategy = Strategy.CORRECTLY) shouldBe 1997106066
+  }
+
+  val day3TestInput = readFile("day03/test.txt").lines()
+  val day3RealInput = readFile("day03/input.txt").lines()
+
+  test("day 3 part 1") {
+    Diagnostic(day3TestInput).powerConsumption shouldBe 198
+    Diagnostic(day3RealInput).powerConsumption shouldBe 2743844
+  }
+
+  test("day 3 part 2") {
+    Diagnostic(day3TestInput).o2Rating shouldBe 23
+    Diagnostic(day3TestInput).co2Rating shouldBe 10
+    Diagnostic(day3TestInput).lifeSupportRating shouldBe 230
+    Diagnostic(day3RealInput).lifeSupportRating shouldBe 6677951
   }
 })
