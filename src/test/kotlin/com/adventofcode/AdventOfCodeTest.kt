@@ -1,7 +1,10 @@
 package com.adventofcode
 
 import io.kotest.core.spec.style.FunSpec
+import io.kotest.matchers.collections.shouldHaveSize
 import io.kotest.matchers.shouldBe
+import io.kotest.matchers.shouldHave
+import io.kotest.matchers.shouldNot
 
 class AdventOfCodeTest : FunSpec({
   val day1TestInput = readFile("day01/test.txt").trim().lineSequence().map { it.toInt() }
@@ -25,7 +28,7 @@ class AdventOfCodeTest : FunSpec({
     dive(day2RealInput, strategy = Strategy.BADLY) shouldBe 1936494
   }
 
-  test ("day 2 part 2") {
+  test("day 2 part 2") {
     dive(day2TestInput, strategy = Strategy.CORRECTLY) shouldBe 900
     dive(day2RealInput, strategy = Strategy.CORRECTLY) shouldBe 1997106066
   }
@@ -56,5 +59,18 @@ class AdventOfCodeTest : FunSpec({
   test("day 4 part 2") {
     Bingo.parse(day4TestInput).findAndScoreLastWinner() shouldBe 1924
     Bingo.parse(day4RealInput).findAndScoreLastWinner() shouldBe 8224
+  }
+
+  val day5TestInput = readFile("day05/test.txt")
+  val day5RealInput = readFile("day05/input.txt")
+
+  test("day 5 part 1") {
+    findVents(day5TestInput, excludeDiagonals = true) shouldBe 5
+    findVents(day5RealInput, excludeDiagonals = true) shouldBe 4993
+  }
+
+  test("day 5 part 2") {
+    findVents(day5TestInput, excludeDiagonals = false) shouldBe 12
+    findVents(day5RealInput, excludeDiagonals = false) shouldBe 21101
   }
 })
