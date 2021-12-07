@@ -73,4 +73,17 @@ class AdventOfCodeTest : FunSpec({
     findVents(day5TestInput, excludeDiagonals = false) shouldBe 12
     findVents(day5RealInput, excludeDiagonals = false) shouldBe 21101
   }
+
+  val day6TestInput = readFile("day06/test.txt")
+  val day6RealInput = readFile("day06/input.txt")
+
+  test("day 6 part 1") {
+    computeFishPopulation(day6TestInput) shouldBe 5934
+    computeFishPopulation(day6RealInput) shouldBe 372300
+  }
+
+  test(" day 6 part 2") {
+    computeFishPopulation(day6TestInput, 256) shouldBe 26984457539
+    computeFishPopulation(day6RealInput, 256) shouldBe 1675781200288
+  }
 })

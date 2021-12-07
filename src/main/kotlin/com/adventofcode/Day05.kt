@@ -34,7 +34,7 @@ data class Line(val start: Point, val end: Point) {
   }
 }
 
-fun parse(input: String): List<Line> = input.lines()
+private fun parse(input: String): List<Line> = input.lines()
   .map { line ->
     val (a, _, b) = line.split(" ")
     val (x1, y1) = a.split(",").map { it.toInt() }
